@@ -15,7 +15,8 @@ import com.test.base.TestBase;
  */
 public class AppTest extends TestBase
 {
-    /**
+	WebDriver driver;
+	/**
      * Rigorous Test :-)
      * @throws InterruptedException 
      */
@@ -23,23 +24,8 @@ public class AppTest extends TestBase
     public void shouldAnswerWithTrue() throws InterruptedException
     {
     	System.out.println( "Hello World!" );
-    	System.out.println( "environment => " + System.getProperty("environment"));
-    	System.out.println( "browser => " + System.getProperty("browser"));
-    	WebDriver driver;
         driver = getWebDriver();
         driver.get("https://demoqa.com/buttons");
         assertTrue( true );
     }
- /*   
-    @Test
-    public void shouldAnswerWithTrue1() throws InterruptedException
-    {
-    	System.out.println( "Hello World! 2" );
-    	WebDriver driver;
-        driver = new ChromeDriver();
-        driver.get("https://demoqa.com/buttons");
-        assertTrue( true );
-        driver.close();
-    }
-  */  
 }
