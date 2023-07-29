@@ -1,13 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Sample Test" verbose="1" parallel="tests"
+<suite name="Admin Console Validation" verbose="1" parallel="tests"
 	thread-count="3">
-	<!--  <parameter name="environment" value="MyEnvironment" />
-	<parameter name="tagsToRun" value="ALL" />
-	 -->
-	<test name="Results On Google Search Page" preserve-order="true">
+	<listeners>
+		<listener class-name="io.qameta.allure.testng.AllureTestNg" />
+	</listeners>
+	<test name="User Login validation" preserve-order="true">
 		<classes>
-			<class name="MySampleProject.SeleniumProject.AppTest">
+			<class name="com.test.validation.AppTest">
 			</class>
 		</classes>
 	</test>
